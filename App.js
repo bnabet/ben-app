@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useScreens } from 'react-native-screens';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import {createStore, combineReducers } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 import MealsNavigator from './navigation/MealsNavigator';
@@ -11,7 +11,7 @@ import mealsReducer from './store/reducers/meals';
 useScreens();
 
 const rootReducer = combineReducers({
-	meal: mealsReducer
+	meals: mealsReducer
 });
 
 const store = createStore(rootReducer);
