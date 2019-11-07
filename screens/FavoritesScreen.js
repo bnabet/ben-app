@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+
 import { MEALS } from '../data/dummy-data';
 import MealList from '../components/MealList';
 import HeaderButton from '../components/HeaderButton';

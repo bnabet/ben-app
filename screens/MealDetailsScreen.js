@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Image, View, Text, Button } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+
 import { MEALS } from '../data/dummy-data';
 import HeaderButton from '../components/HeaderButton';
 import DefaultText from '../components/DefaultText';
@@ -33,7 +34,7 @@ const MealDetailsScreen = props => {
 			{selectedMeal.steps.map(step => (
 				<ListItem key={step}>{step}</ListItem>
 			))}
-			
+
 			{/* <View style={styles.screen}>
 				<Text>{selectedMeal.title}</Text>
 				<Button

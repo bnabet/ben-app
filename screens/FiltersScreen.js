@@ -2,8 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { StyleSheet, View, Text, Switch, Platform } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
-import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
+import HeaderButton from '../components/HeaderButton';
 
 const FilterSwitch = props => {
 	return (
