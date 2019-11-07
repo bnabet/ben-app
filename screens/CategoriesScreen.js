@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import { Text, View, FlatList } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { CATEGORIES } from '../data/dummy-data';
 import HeaderButton from '../components/HeaderButton';
@@ -22,18 +22,22 @@ const CategoriesScreen = props => {
 	};
 
 	return (
-		<FlatList
-			keyExtractor={(item, index) => item.id}
-			data={CATEGORIES}
-			renderItem={renderGridItem}
-			numColumns={2}
-		/>
+		<View>
+			<Text>(CategoriesScreen) FlatList</Text>
+			<FlatList
+				keyExtractor={(item, index) => item.id}
+				data={CATEGORIES}
+				renderItem={renderGridItem}
+				numColumns={2}
+			/>
+		</View>
 	);
 };
 
+// HEAD BAR
 CategoriesScreen.navigationOptions = navData => {
 	return {
-		headerTitle: 'Meal Categories',
+		headerTitle: 'CategoriesScreen', // Meal Categories
 		headerLeft: (
 			<HeaderButtons HeaderButtonComponent={HeaderButton}>
 				<Item

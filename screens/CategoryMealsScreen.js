@@ -14,12 +14,13 @@ const CategoryMealsScreen = props => {
 	);
 };
 
+// HEAD BAR
 CategoryMealsScreen.navigationOptions = navigationData => {
 	const catId = navigationData.navigation.getParam('categoryId');
 	const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
 
 	return {
-		headerTitle: selectedCategory.title
+		headerTitle: 'CategoryMealsScreen' // selectedCategory.title
 	};
 };
 

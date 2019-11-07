@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, FlatList, StyleSheet } from 'react-native';
+import { Text, View, FlatList, StyleSheet } from 'react-native';
 
 import MealItem from './MealItem';
 
@@ -24,6 +24,7 @@ const MealList = props => {
 
 	return (
 		<View style={styles.list}>
+			<Text>MealList</Text>
 			<FlatList
 				data={props.listData}
 				keyExtractor={(item, index) => item.id}
@@ -34,6 +35,7 @@ const MealList = props => {
 	);
 };
 
+// STYLES
 const styles = StyleSheet.create({
 	list: {
 		flex: 1,

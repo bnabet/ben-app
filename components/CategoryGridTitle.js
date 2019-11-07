@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Platform } from 'react-native';
 import { TouchableNativeFeedback } from 'react-native-gesture-handler';
 
-const CategoryGridTitle = (props) => {
+const CategoryGridTitle = props => {
 	let TouchableCmp = TouchableOpacity;
 
 	if (Platform.OS === 'android' && Platform.Version >= 21) {
@@ -22,12 +22,14 @@ const CategoryGridTitle = (props) => {
 					>
 						{props.title}
 					</Text>
+					<Text style={styles.info}>(CategoryGridTitle)</Text>
 				</View>
 			</TouchableCmp>
 		</View>
 	);
 };
 
+// STYLES
 const styles = StyleSheet.create({
 	gridItem: {
 		flex: 1,
@@ -57,6 +59,10 @@ const styles = StyleSheet.create({
 		fontFamily: 'open-sans-bold',
 		fontSize: 22,
 		textAlign: 'right'
+	},
+	info: {
+		fontFamily: 'open-sans',
+		fontSize: 14,
 	}
 });
 
